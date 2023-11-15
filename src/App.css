@@ -28,6 +28,92 @@
   color: #61dafb;
 }
 
+.App-button {
+    width: 100%;
+    
+    
+    
+}
+.App-table-header {
+    font: bold 15px Arial;
+    /*text-decoration: none;*/
+    /*background-color: #64b5f6;*/
+    color: #EEEE;
+    /*background-image: linear-gradient(180deg,purple,rgba(0, 58, 241, 0.71));*/
+    background: #9fa8da;
+    /*padding: 2px 6px 2px 6px;*/
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-radius: 4px;
+}
+
+.App-retro-button {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+.App-retro-button:hover {
+    box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
+    transition: all 0.1s ease 0s;
+}
+
+
+
+.App-village-button {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color:;
+    /*background-image: linear-gradient(180deg,rgba(245, 39, 145, 0.36),rgba(241, 0, 158, 0.71));*/
+    background-image: linear-gradient(180deg,#662D8C,#ED1E79);
+    color: #EEEEEE;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-radius: 4px;
+}
+.App-village-button:hover {
+    box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
+    transition: all 0.1s ease 0s;
+}
+
+
+.App-github-button {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-image: linear-gradient(180deg,#7c8aff,#3c4fe0);
+    color: #EEEEEE;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-radius: 4px;
+    
+}
+
+.App-github-button:hover {
+    box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
+    transition: all 0.1s ease 0s;
+}
+
+.MuiDataGrid-row.Mui-odd {
+    background-color: mintcream;
+}
+
+.MuiDataGrid-row.Mui-even {
+    background-color: #e0f2f1;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
