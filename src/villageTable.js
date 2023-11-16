@@ -70,7 +70,7 @@ const columns = [
         width: 160,
         renderCell: (params) => {
             /*return <a class="" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}>{params.row.player}</a>*/
-            return <ColorButton size="small"  fg={ indigo[400] } bg={ indigo[700] } className="App-button" variant="filledTonal" href={`https://sow.x1.europe.travian.com/profile${params.row.uid}`}> {params.row.player} </ColorButton>;
+            return <ColorButton size="small"  fg={ indigo[400] } bg={ indigo[700] } className="App-button" variant="filledTonal" href={`https://sow.x1.europe.travian.com/profile/${params.row.uid}`}> {params.row.player} </ColorButton>;
         },
         valueGetter: (params) =>
             `${params.row.player || ''} ${params.row.alliance || ''}`,
@@ -87,7 +87,7 @@ const columns = [
         sortable: true,
         renderCell: (params) => {
             /*return <a class="" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}>{params.row.player}</a>*/
-            return <ColorButton color="" size="small" fg={purple[200]} bg={purple[500]} className="App-button" variant="filledTonal" href={`https://sow.x1.europe.travian.com/alliance${params.row.aid}`}> {params.row.alliance} </ColorButton>;
+            return <ColorButton color="" size="small" fg={purple[200]} bg={purple[500]} className="App-button" variant="filledTonal" href={`https://sow.x1.europe.travian.com/alliance/${params.row.aid}`}> {params.row.alliance} </ColorButton>;
         },
     },
     { field: 'capital', headerName: 'Capital', headerClassName: 'App-table-header', align: 'right', width: 70 },
