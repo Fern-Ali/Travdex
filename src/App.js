@@ -18,6 +18,7 @@ function App() {
         axios({
             method: "GET",
             url: `https://travdex-index.onrender.com/${route}`,
+            
         })
             .then((response) => {
                 const res = response.data

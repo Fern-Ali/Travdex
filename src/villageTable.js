@@ -12,6 +12,13 @@ import { purple, red, blue, green, teal, indigo, pink } from '@mui/material/colo
 
 const columns = [
     {
+        field: 'inactive', headerName: 'Status', headerClassName: 'App-table-header', align: 'center', headerAlign: 'center', width: 150,
+        renderCell: (params) => {
+            /*return <a class="App-retro-button" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}>{params.row.inactive === true ? 'Inactive' : 'Active' }</a>;*/
+            return <ColorButton color={params.row.inactive === true ? 'white' : 'black' } size="small" bg={params.row.inactive === true ? pink[500] : green[100]  } fg={pink[700]} className="slim" variant="filledTonal" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}> {params.row.inactive === true ? 'Inactive' : 'Active'} </ColorButton>;
+        },
+    },
+    {
         field: 'xy',
         headerName: 'Coords',
         headerClassName: 'App-table-header',
@@ -96,17 +103,6 @@ const columns = [
 ];
 
 
-//const rows = [
-//    { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-//    { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-//    { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-//    { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-//    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-//    { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-//    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-//    { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-//    { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-//];
 
 
 
@@ -129,7 +125,22 @@ const VillageTable = (props) => {
                 rows={
                     props.info.map((item) => (
                         {
-                            id: item.id, x: item.x, y: item.y, xy: `${item.x}, ${item.y}`, region: item.region, village: item.village, population: item.population, player: `${item.player}`, alliance: item.alliance ? item.alliance : '⛔' , uid: item.uid, capital: item.capital ? '✅' : '⛔', harbor: item.harbor ? '✅' : '⛔', city: item.city ? '✅' : '⛔', aid: item.aid }
+                            id: item.id,
+                            x: item.x,
+                            y: item.y,
+                            xy: `${item.x}, ${item.y}`,
+                            region: item.region,
+                            village: item.village,
+                            population: item.population,
+                            player: `${item.player}`,
+                            alliance: item.alliance ? item.alliance : '⛔',
+                            uid: item.uid,
+                            capital: item.capital ? '✅' : '⛔',
+                            harbor: item.harbor ? '✅' : '⛔',
+                            city: item.city ? '✅' : '⛔',
+                            aid: item.aid,
+                            inactive: item.inactive
+                        }
                     ))
                 }
                 
