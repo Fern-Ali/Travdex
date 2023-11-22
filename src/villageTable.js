@@ -40,6 +40,16 @@ const columns = [
         editable: false,
     },
     {
+        field: 'vp',
+        headerName: 'Victory',
+        headerClassName: 'App-table-header',
+        headerAlign: 'left',
+        align: 'left',
+        type: 'number',
+        width: 90,
+        editable: false,
+    },
+    {
         field: 'region',
         headerName: 'Region',
         headerClassName: 'App-table-header',
@@ -139,7 +149,8 @@ const VillageTable = (props) => {
                             harbor: item.harbor ? '✅' : '⛔',
                             city: item.city ? '✅' : '⛔',
                             aid: item.aid,
-                            inactive: item.inactive
+                            inactive: item.inactive,
+                            vp: item.vp
                         }
                     ))
                 }
