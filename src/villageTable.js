@@ -15,7 +15,7 @@ const columns = [
         field: 'inactive', headerName: 'Status', headerClassName: 'App-table-header', align: 'center', headerAlign: 'center', width: 150,
         renderCell: (params) => {
             /*return <a class="App-retro-button" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}>{params.row.inactive === true ? 'Inactive' : 'Active' }</a>;*/
-            return <ColorButton color={params.row.inactive === true ? 'white' : 'black'} size="small" bg={params.row.inactive === true ? pink[500] : green[100]} fg={pink[700]} className="slim" variant="filledTonal" href={`https://www.gettertools.com/sow.x1.europe.travian.com/Player/${params.row.uid}-${params.row.player}`}> {params.row.inactive === true ? 'Inactive' : 'Active'} </ColorButton>;
+            return <ColorButton color={params.row.inactive === true ? 'white' : 'black'} size="small" bg={params.row.inactive === true ? pink[500] : green[100]} fg={pink[700]} className="slim" variant="filledTonal" href={`https://www.gettertools.com/sow.x1.europe.travian.com/Player/${params.row.uid}-${params.row.player}`} target="_blank"> {params.row.inactive === true ? 'Inactive' : 'Active'} </ColorButton>;
         },
     },
     {
@@ -25,7 +25,7 @@ const columns = [
         headerAlign: 'left',
         width: 90,
         renderCell: (params) => {
-            return <a class="App-retro-button" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}` }>({params.row.x}, {params.row.y})</a>;
+            return <a class="App-retro-button" target="_blank"  href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}` }>({params.row.x}, {params.row.y})</a>;
             /*return <ColorButton size="small" bg={pink[500]} fg={pink[700]} className="App-button" variant="filledTonal" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}> ({params.row.x}, {params.row.y}) </ColorButton>;*/
         },
     },
@@ -59,7 +59,7 @@ const columns = [
         editable: false,
         renderCell: (params) => {
             /*return <a class="App-github-button" href={`https://sow.x1.europe.travian.com/region/${params.row.region}`}>{params.row.region}</a>;*/
-            return <ColorButton size="small" bg={teal[700]} fg={teal[300]} className="App-button" variant="filledTonal" href={`https://sow.x1.europe.travian.com/region/${params.row.region}`}> {params.row.region} </ColorButton>;
+            return <ColorButton size="small" bg={teal[700]} fg={teal[300]} className="App-button" variant="filledTonal" target="_blank" href={`https://sow.x1.europe.travian.com/region/${params.row.region}`}> {params.row.region} </ColorButton>;
         },
     },
     {
@@ -72,7 +72,7 @@ const columns = [
         editable: false,
         renderCell: (params) => {
             //return <a class="" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}>{params.row.village}</a>
-            return <ColorButton size="small" fg={blue[400]} bg={blue[300]} className="App-button" variant="filledTonal" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}> {params.row.village} </ColorButton> ;
+            return <ColorButton size="small" fg={blue[400]} bg={blue[300]} className="App-button" variant="filledTonal" target="_blank" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}> {params.row.village} </ColorButton> ;
         },
     },
 
@@ -87,7 +87,7 @@ const columns = [
         width: 160,
         renderCell: (params) => {
             /*return <a class="" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}>{params.row.player}</a>*/
-            return <ColorButton size="small"  fg={ indigo[400] } bg={ indigo[700] } className="App-button" variant="filledTonal" href={`https://sow.x1.europe.travian.com/profile/${params.row.uid}`}> {params.row.player} </ColorButton>;
+            return <ColorButton size="small" fg={indigo[400]} bg={indigo[700]} className="App-button" variant="filledTonal" target="_blank" href={`https://sow.x1.europe.travian.com/profile/${params.row.uid}`}> {params.row.player} </ColorButton>;
         },
         valueGetter: (params) =>
             `${params.row.player || ''} ${params.row.alliance || ''}`,
@@ -104,7 +104,7 @@ const columns = [
         sortable: true,
         renderCell: (params) => {
             /*return <a class="" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}>{params.row.player}</a>*/
-            return <ColorButton color="" size="small" fg={purple[200]} bg={purple[500]} className="App-button" variant="filledTonal" href={`https://sow.x1.europe.travian.com/alliance/${params.row.aid}`}> {params.row.alliance} </ColorButton>;
+            return <ColorButton color="" size="small" fg={purple[200]} bg={purple[500]} className="App-button" variant="filledTonal" target="_blank" href={`https://sow.x1.europe.travian.com/alliance/${params.row.aid}`}> {params.row.alliance} </ColorButton>;
         },
     },
     { field: 'capital', headerName: 'Capital', headerClassName: 'App-table-header', align: 'right', width: 70 },
