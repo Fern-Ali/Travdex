@@ -15,7 +15,7 @@ const columns = [
         field: 'inactive', headerName: 'Status', headerClassName: 'App-table-header', align: 'center', headerAlign: 'center', width: 150,
         renderCell: (params) => {
             /*return <a class="App-retro-button" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}>{params.row.inactive === true ? 'Inactive' : 'Active' }</a>;*/
-            return <ColorButton color={params.row.inactive === true ? 'white' : 'black' } size="small" bg={params.row.inactive === true ? pink[500] : green[100]  } fg={pink[700]} className="slim" variant="filledTonal" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}> {params.row.inactive === true ? 'Inactive' : 'Active'} </ColorButton>;
+            return <ColorButton color={params.row.inactive === true ? 'white' : 'black'} size="small" bg={params.row.inactive === true ? pink[500] : green[100]} fg={pink[700]} className="slim" variant="filledTonal" href={`https://www.gettertools.com/sow.x1.europe.travian.com/Player/${params.row.uid}-${params.row.player}`}> {params.row.inactive === true ? 'Inactive' : 'Active'} </ColorButton>;
         },
     },
     {
