@@ -83,14 +83,14 @@ const columns = [
         headerAlign: 'center',
         align: 'left',
         description: 'This column has a value getter and is not sortable.',
-        sortable: false,
+        sortable: true,
         width: 160,
         renderCell: (params) => {
             /*return <a class="" href={`https://sow.x1.europe.travian.com/karte.php?x=${params.row.x}&y=${params.row.y}`}>{params.row.player}</a>*/
             return <ColorButton size="small" fg={indigo[400]} bg={indigo[700]} className="App-button" variant="filledTonal" target="_blank" href={`https://sow.x1.europe.travian.com/profile/${params.row.uid}`}> {params.row.player} </ColorButton>;
         },
         valueGetter: (params) =>
-            `${params.row.player || ''} ${params.row.alliance || ''}`,
+            `${params.row.player || ''}`,
     },
 
     {
